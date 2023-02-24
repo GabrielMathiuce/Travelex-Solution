@@ -11,7 +11,7 @@ public class IMCService {
 
     public Double calculateIMC(Double weight, Double height) {
         DecimalFormat df = new DecimalFormat("#.##");
-        return Double.parseDouble(df.format(weight / (height * height)));
+        return Double.parseDouble(df.format(weight / (height * height)).replace(",","."));
     }
 
     public String createResultStringForUser(Double imc) {

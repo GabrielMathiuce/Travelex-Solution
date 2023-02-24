@@ -14,11 +14,9 @@ import java.time.format.DateTimeFormatter;
 
 @ControllerAdvice
 @RestController
-public class CustomizedExceptionHandler {
+public class CustomizedResponseEntityExceptionHandler {
     private static final String PATTERN= "yyyy-MM-dd HH:mm:ss";
     DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(PATTERN);
-
-
     private final String CUSTOM_MESSAGE_BAD_REQUEST = "Favor verificar os parametros inseridos";
     private final String CUSTOM_MESSAGE_GENERIC_EXCEPTION = "Ocorreu um erro inesperado em nosso servidor!";
 
