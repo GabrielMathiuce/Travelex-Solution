@@ -22,7 +22,7 @@ class ResolucaoApplicationTests {
 
 	@Test
 	void esperoReceberIMCDe27Ponto04() {
-		Assertions.assertEquals(imcService.calculateIMC(80D, 1.72), 27.04D);
+		Assertions.assertEquals(imcService.calculateIMC(80D, "1.72"), 27.04D);
 	}
 
 	@Test
@@ -32,7 +32,7 @@ class ResolucaoApplicationTests {
 
 	@Test
 	void esperoReceberIMCDe21Ponto72EFaixaDePesoNormal() {
-		Assertions.assertEquals(imcService.calculateIMC(57D, 1.62D), 21.72D);
+		Assertions.assertEquals(imcService.calculateIMC(57D, "1.62D"), 21.72D);
 		Assertions.assertEquals(WeightRangeEnum.calculateWeigthRange(21.72D), WeightRangeEnum.PESO_NORMAL);
 	}
 
