@@ -9,7 +9,7 @@ public enum WeightRangeEnum {
     SOBREPESO(29.99D, "Sobrepeso"),
     OBESIDADE_GRAU_UM(34.99D, "Obesidade grau um"),
     OBESIDADE_GRAU_DOIS(39.99D, "Obesidade grau dois"),
-    OBESIDADE_GRAU_TRES(40D, "Obesidade grau três");
+    OBESIDADE_GRAU_TRES(40D, "Obesidade grau tres");
 
     private final Double imc;
     private final String weightRangeDTO;

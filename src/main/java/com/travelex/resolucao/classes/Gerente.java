@@ -1,4 +1,7 @@
 package com.travelex.resolucao.classes;
 
-public class Gerente {
+public class Gerente extends ExchangeEntity {
+    public Gerente(String name) {
+        super(name);
+    }
 }

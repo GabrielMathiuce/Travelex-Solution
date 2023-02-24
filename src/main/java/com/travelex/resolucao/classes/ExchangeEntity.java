@@ -48,6 +48,4 @@ public abstract class ExchangeEntity {
         if(name.isBlank()) throw new BlankNameException();
         else this.name = name.trim();
     }
-
-
 }
