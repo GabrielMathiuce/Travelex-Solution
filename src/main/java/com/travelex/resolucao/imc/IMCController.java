@@ -22,7 +22,7 @@ public class IMCController {
      */
 
     @GetMapping(value = "/calculator")
-    private ResponseEntity<String> calculateIMC(@RequestParam Double weight, @RequestParam Double height) {
+    private ResponseEntity<String> calculateIMC(@RequestParam Double weight, @RequestParam String height) {
         return new ResponseEntity<>(imcService.createResultStringForUser(imcService.calculateIMC(weight, height)), HttpStatus.OK);
     }
 }
