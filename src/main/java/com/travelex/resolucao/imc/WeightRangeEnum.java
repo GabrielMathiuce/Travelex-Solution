@@ -26,6 +26,8 @@ public enum WeightRangeEnum {
         this.weightRangeDTO = weightRangeDTO;
     }
 
+    //Na linha 32 eu converto os valores da Enum em um stream, ordeno esse stream em ordem decrescente avaliando o valor de IMC e então transformo
+    //essa stream em uma List
     public static WeightRangeEnum calculateWeigthRange(Double imc) {
         WeightRangeEnum result = null;
             for(WeightRangeEnum weightRangeEnum : Arrays.stream(WeightRangeEnum.values()).sorted((o1, o2) -> o2.getImc().compareTo(o1.getImc())).collect(Collectors.toList())) {

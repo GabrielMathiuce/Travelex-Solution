@@ -1,5 +1,6 @@
 package com.travelex.resolucao.imc;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,8 @@ import java.util.Map;
 @RequestMapping("/imc")
 public class IMCController {
 
-    private IMCService imcService = new IMCService();
+    @Autowired
+    private IMCService imcService;
 
     /**
      * Uma alternativa para a anotacao @Autowired seria a seguinte abordagem:

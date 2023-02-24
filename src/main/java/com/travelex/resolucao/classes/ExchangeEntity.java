@@ -14,6 +14,8 @@ public abstract class ExchangeEntity {
         return this.name.split(" ")[0];
     }
 
+    //Splito o nome levando em consideracao espacos em branco, criando assim um array, no qual eu itero
+    // comecando com a variavel ja em 1, para pular o primeiro nome e eu obter somente o sobrenome.
     public String getSurname() {
         String surname = "";
         String[] fullname = this.name.split(" ");
@@ -27,6 +29,8 @@ public abstract class ExchangeEntity {
         return this.name.toUpperCase().trim();
     }
 
+    //Aqui assim como no metodo "getSurname", eu transformo o nome em um array e substituo a posicao 0
+    //pelo primeiro caractere da mesma (ex: (M)athiuce) e adiciono um ponto final.
     public String getAbbreviatedName() {
         char abbreviatedMiddleName;
         String[] fullName = this.name.split(" ");
